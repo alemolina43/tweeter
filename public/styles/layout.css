@@ -15,6 +15,11 @@ html {
  */
 
 body {
+ 
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
