@@ -1,0 +1,25 @@
+#tweet-text {
+  display: flex;
+  border: none;
+  border-bottom: 3px solid #545149;
+  background-color: inherit;
+  width: 100%;
+  align-items: center; /* Aligns text vertically */
+  }
+ 
+.submit-form {
+  font-family: "Bungee", sans-serif;    
+  font-weight: 500;    
+  font-style: normal;   
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px; 
+}
+
+button {
+  font-size: smaller;
+  background-color: #4056a1;
+  color: #FFFFFF;   
+  border: none;
+  padding: .2em .4em;
+}

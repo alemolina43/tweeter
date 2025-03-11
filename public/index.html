@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!--Font awesome-->
     <link
@@ -44,7 +45,7 @@
     <nav>
       <span>tweeter</span>
       <div class="right-section">
-        <span class="new-tweet"><b>Write</b> a new tweet</span>
+        <span class="write-tweet"><b>Write</b> a new tweet</span>
         <i class="fa-solid fa-angles-down" style="color: #ff2600"></i>
       </div>
     </nav>
@@ -59,16 +60,20 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <h1>Lorem Ipsum</h1>
-      <p>
-        The classic Latin passage that just never gets old, enjoy as much (or as
-        little) lorem ipsum as you can handle with our easy to use filler text
-        generator. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-        do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-        in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      </p>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="/api/tweets" , method="post">
+          <textarea
+            name="text"
+            id="tweet-text"
+            placeholder="What are you humming about?"
+          ></textarea>
+          <div class="submit-form">
+            <button type="submit">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
     </main>
   </body>
 </html>
