@@ -4,7 +4,7 @@
   border-bottom: 3px solid #545149;
   background-color: inherit;
   width: 100%;
-  align-items: center; /* Aligns text vertically */
+  align-items: center; 
   }
  
 .submit-form {
@@ -22,4 +22,5 @@ button {
   color: #FFFFFF;   
   border: none;
   padding: .2em .4em;
+  cursor: pointer;
 }
