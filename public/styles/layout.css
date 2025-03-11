@@ -15,16 +15,24 @@ html {
  */
 
 body {
- 
-  font-family: "Source Sans 3", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: cornsilk;
   font-size: 24px;
+  font-family: 'Source Sans 3', sans-serif;
+  padding-top: 120px;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ header {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  width: 100vw;
+  background-color: #94b6e0;
+  background-image: url("/images/asfalt-light.png"); 
+  background-size: cover; 
+  background-position: center;
+ }
