@@ -11,12 +11,10 @@ $(document).ready(function() {
 
     counter.text(count); // update the counter text
 
-    // Check if the count is negative and apply the color change
     if (count < 0) {
-      counter.css("color", "red"); // Negative count, color red
+      counter.addClass("low-count");
     } else {
-      counter.css("color", "black"); // Positive count, color black
+      counter.removeClass("low-count");
     }
   });
 });
-

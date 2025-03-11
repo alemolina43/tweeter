@@ -25,3 +25,10 @@ button {
   cursor: pointer;
 }
 
+.counter {
+  color: #545149;
+}
+
+.counter.low-count {
+  color: red;
+}
