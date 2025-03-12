@@ -25,13 +25,11 @@ $(document).ready(function() {
     
   $(".create-tweet").on("submit", function(event) {
     event.preventDefault();
-  
     const formData = $(this).serialize();
-
     $.post("/api/tweets", formData, function() {
       console.log('data sent', formData);
     });
-  
+    $("textarea").val("");
   });
 });
 
@@ -46,7 +44,7 @@ const renderTweets = function(tweetsArr) {
 
 const createTweetElement = function(tweetObj) {
   const time = timeago.format(tweetObj['created_at']);
-  
+
   let $tweet = `
   <article class="tweet">
     <header>
