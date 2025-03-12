@@ -25,7 +25,9 @@
   font-weight: 300;
 }
 
-i {
+#tweets-container img {
+  height: 38.4px;
+  width: 38.4px;
   padding: .3em;
 }
 
