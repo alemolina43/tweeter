@@ -1,0 +1,40 @@
+article {
+  border: 2px solid #545149; /* Solid black border for each article */
+  padding: 15px; /* Space inside the border */
+  margin: 10px 0; 
+}
+
+article:hover {
+  box-shadow: 5px 5px 15px #4056a1;
+
+}
+.tweet header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.handle {
+  color: #b9bdba;
+  font-size: smaller;
+}
+
+.user {
+  display: flex;
+  align-items: baseline;
+  font-weight: 300;
+}
+
+i {
+  padding: .3em;
+}
+
+footer {
+  display: flex;
+ justify-content: flex-end;
+  color: #4056a1;
+}
+
+footer i:hover {
+  color: goldenrod;
+}
