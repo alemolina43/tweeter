@@ -47,7 +47,7 @@ const renderTweets = function(tweetsArr) {
   //loop through the array and create HTML article for each
   for (let tweet of tweetsArr) {
     let $tweetHTML = createTweetElement(tweet);
-    $("#tweets-container").append($tweetHTML);
+    $("#tweets-container").prepend($tweetHTML);
   }
 };
 
