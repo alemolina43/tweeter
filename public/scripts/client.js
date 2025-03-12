@@ -3,9 +3,25 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
 $(document).ready(function() {
   console.log('Ready to tweet');
+
+  const loadTweets = function() {
+    $.ajax({
+      url: '/api/tweets', // the endpoint to fetch data from
+      type: 'GET',
+      dataType: 'json',   // the expected response type
+      success: function(response) {
+        console.log('Data received:', response);
+        renderTweets(response);
+      },
+      error: function(status, error) {
+        console.log('Error:', error);
+      }
+    });
+  };
+
+  loadTweets();
     
   $(".create-tweet").on("submit", function(event) {
     event.preventDefault();
@@ -15,33 +31,10 @@ $(document).ready(function() {
     $.post("/api/tweets", formData, function() {
       console.log('data sent', formData);
     });
+  
   });
 });
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
 
 const renderTweets = function(tweetsArr) {
   //loop through the array and create HTML article for each
@@ -52,6 +45,8 @@ const renderTweets = function(tweetsArr) {
 };
 
 const createTweetElement = function(tweetObj) {
+  const time = timeago.format(tweetObj['created_at']);
+  
   let $tweet = `
   <article class="tweet">
     <header>
@@ -63,7 +58,7 @@ const createTweetElement = function(tweetObj) {
     </header>
     <p>${tweetObj.content.text}</p>
     <footer>
-      <span class="timestamp">${tweetObj['created_at']}</span>
+      <span class="timestamp">${time}</span>
       <div class="icons">
         <i name="flag" class="fa-solid fa-flag"></i>
         <i name="share" class="fa-solid fa-retweet"></i>
@@ -76,4 +71,4 @@ const createTweetElement = function(tweetObj) {
 };
 
 
-renderTweets(data);
+//renderTweets(data);

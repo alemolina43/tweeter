@@ -21,15 +21,15 @@
 
 .user {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   font-weight: 300;
 }
 
 #tweets-container img {
-  height: 38.4px;
+   height: 38.4px;
   width: 38.4px;
   padding: .3em;
-}
+ }
 
 footer {
  display: flex;
