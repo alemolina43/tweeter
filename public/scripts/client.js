@@ -25,10 +25,12 @@ $(document).ready(function() {
     
   $(".create-tweet").on("submit", function(event) {
     event.preventDefault();
-    if ($("textarea").val() === "") {
+    const tweetText = $("textarea").val().trim();
+
+    if (tweetText === "") {
       return alert("This field can't be empty!");
     }
-    if ($("textarea").val().length > 140) {
+    if (tweetText.length > 140) {
       return alert("Tweet should be 140 characters or less");
 
     } else {
@@ -38,7 +40,6 @@ $(document).ready(function() {
       });
       $("textarea").val("");
     }
-
   });
 });
 
