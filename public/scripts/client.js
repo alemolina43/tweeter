@@ -26,12 +26,13 @@ $(document).ready(function() {
   $(".create-tweet").on("submit", function(event) {
     event.preventDefault();
     let tweetText = $("textarea").val().trim();
+    $(".error-message").slideUp();
 
     if (tweetText.length === 0) {
-      return alert("This field can't be empty!");
+      $('.error-message').text("⚠️This field can't be empty!").slideDown(1000);
     }
     if (tweetText.length > 140) {
-      return alert("Tweet should be 140 characters or less");
+      $('.error-message').text("⚠️Tweet should be 140 characters or less").slideDown(1000);
 
     }
    
@@ -44,10 +45,11 @@ $(document).ready(function() {
       success: (tweet) => {
         $("#tweets-container").empty();
         loadTweets();
+        $("textarea").val("");
+        $(".counter").val(140);
       }
     });
   
-    $("textarea").val("");
    
   });
 
