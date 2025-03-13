@@ -58,7 +58,7 @@ $(document).ready(function() {
       url: "/api/tweets",
       data: formData,
       success: (tweet) => {
-        appendTweet(tweet);
+        loadTweets();
       }
     });
   
@@ -74,6 +74,7 @@ const appendTweet = function(tweet) {
 };
 
 const renderTweets = function(tweetsArr) {
+  $("#tweets-container").empty();
   //loop through the array and create HTML article for each
   for (let tweet of tweetsArr) {
     appendTweet(tweet);
