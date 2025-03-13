@@ -22,24 +22,38 @@ $(document).ready(function() {
   };
 
   loadTweets();
+
+  const sanitizeInput = (input) => {
+    return input
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  };
     
   $(".create-tweet").on("submit", function(event) {
     event.preventDefault();
-    const tweetText = $("textarea").val().trim();
+    let tweetText = $("textarea").val().trim();
 
-    if (tweetText === "") {
+    if (tweetText.length === 0) {
       return alert("This field can't be empty!");
     }
     if (tweetText.length > 140) {
       return alert("Tweet should be 140 characters or less");
 
-    } else {
-      const formData = $(this).serialize();
-      $.post("/api/tweets", formData, function() {
-        console.log('data sent', formData);
-      });
-      $("textarea").val("");
     }
+    // Sanitize the text before sending
+    tweetText = sanitizeInput(tweetText);
+    $("textarea").val(tweetText); //Update the textarea value with sanitized text
+
+
+    const formData = $(this).serialize();
+    $.post("/api/tweets", formData, function() {
+      console.log('data sent', formData);
+    });
+    $("textarea").val("");
+   
   });
 });
 
