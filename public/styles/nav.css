@@ -4,9 +4,9 @@ nav {
   display: flex;
   align-items: center;  
   justify-content: space-between;   
-  height: 70px;
+  height: 120px;
   width: 100vw;
-  background-color: #94b6e0;
+  background-color: #94B6E0;
   background-image: url("/images/asfalt-light.png"); 
   color: #FFFFFF;
   padding: 0 1.5em; 
@@ -33,13 +33,10 @@ nav span {
   align-items: center;
 }
 
-
-
 @media only screen and (min-width: 1024px) {
 
 nav {  
-  height: 90px;
-  background-color: #4056a1;  
+  background-color: #4056A1;  
   background-image: none; 
  }  
 }
