@@ -1,6 +1,6 @@
 .main-header {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -9,4 +9,20 @@
   background-image: url("/images/asfalt-light.png"); 
   background-size: cover; 
   background-position: center;
+ }
+
+ .main-header img {
+  margin-bottom: 5px; 
+}
+
+.main-header h2 {
+  margin-top: 5px; 
+}
+
+ @media only screen and (min-width: 1024px) {
+  .main-header {
+    width: 100%;
+    align-content: center;
+    max-width: 600px; 
+  }
  }

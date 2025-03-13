@@ -1,5 +1,4 @@
 #tweet-text {
-  display: flex;
   border: none;
   border-bottom: 3px solid #545149;
   background-color: inherit;
@@ -38,10 +37,19 @@ button {
 .error-message {
   display: none;
   color: red;
-  padding: 8px;
-  border-radius: 5px;
+  padding: .2em;
   font-weight: bold;
   text-align: center;
   margin-top: 10px;
-  font-size: 15px;
+  font-size: .7em;
 }
+
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+#tweets-container {
+  max-width: 1024px; /
+}
+
+}
+
+

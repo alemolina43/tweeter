@@ -4,18 +4,19 @@ nav {
   display: flex;
   align-items: center;  
   justify-content: space-between;   
-  height: 120px;
+  height: 70px;
   width: 100vw;
-  background-color: #4056a1;  
+  background-color: #94b6e0;
+  background-image: url("/images/asfalt-light.png"); 
   color: #FFFFFF;
-  padding: 0 1.5em;
+  padding: 0 1.5em; 
 }  
 
 nav span {
   font-family: "Bungee", sans-serif;    
   font-weight: 700;    
   font-style: normal;      
-}
+} 
 
 .write-tweet {
   color: #FFFFFF;    
@@ -30,4 +31,15 @@ nav span {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+
+nav {  
+  height: 90px;
+  background-color: #4056a1;  
+  background-image: none; 
+ }  
 }
