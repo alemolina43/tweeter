@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  console.log('Content has been loaded properly');
+  // console.log('Content has been loaded properly');
 
   $("#tweet-text").on("input", function() {
     let tweetLength = $(this).val().length;

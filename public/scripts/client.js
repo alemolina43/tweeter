@@ -4,7 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
-  console.log('Ready to tweet');
+  // console.log('Ready to tweet');
 
   const loadTweets = function() {
     $.ajax({
@@ -49,12 +49,27 @@ $(document).ready(function() {
 
 
     const formData = $(this).serialize();
-    $.post("/api/tweets", formData, function() {
-      console.log('data sent', formData);
+    // $.post("/api/tweets", formData, function() {
+    //   console.log('data sent', formData);
+    // });
+
+    $.ajax({
+      type: "POST",
+      url: "/api/tweets",
+      data: formData,
+      success: (tweet) => {
+        const lastTweet = createTweetElement(tweet);
+        $("#tweets-container").prepend(lastTweet);
+      }
     });
+    
+    
+
+
     $("textarea").val("");
    
   });
+
 });
 
 
