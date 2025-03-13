@@ -58,26 +58,25 @@ $(document).ready(function() {
       url: "/api/tweets",
       data: formData,
       success: (tweet) => {
-        const lastTweet = createTweetElement(tweet);
-        $("#tweets-container").prepend(lastTweet);
+        appendTweet(tweet);
       }
     });
-    
-    
-
-
+  
     $("textarea").val("");
    
   });
 
 });
 
+const appendTweet = function(tweet) {
+  const lastTweet = createTweetElement(tweet);
+  $("#tweets-container").prepend(lastTweet);
+};
 
 const renderTweets = function(tweetsArr) {
   //loop through the array and create HTML article for each
   for (let tweet of tweetsArr) {
-    let $tweetHTML = createTweetElement(tweet);
-    $("#tweets-container").prepend($tweetHTML);
+    appendTweet(tweet);
   }
 };
 
