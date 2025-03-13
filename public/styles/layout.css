@@ -6,7 +6,10 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -28,7 +31,7 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
- main {
+main {
   width: 90%;
   margin: 0 auto;
   background-color: inherit;
@@ -37,10 +40,13 @@ body {
 
 @media only screen and (min-width: 1024px) {
 
-  body {  
+  body {
     display: grid;
-    grid-template-columns: 40% 40%; /* Two columns, each taking 40% width */
-    justify-content: center; /* Center the grid */
-    gap: 20px; /* Space between columns */
+    grid-template-columns: 40% 40%;
+    /* Two columns, each taking 40% width */
+    justify-content: center;
+    /* Center the grid */
+    gap: 20px;
+    /* Space between columns */
   }
 }
