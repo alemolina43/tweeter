@@ -25,11 +25,20 @@ $(document).ready(function() {
     
   $(".create-tweet").on("submit", function(event) {
     event.preventDefault();
-    const formData = $(this).serialize();
-    $.post("/api/tweets", formData, function() {
-      console.log('data sent', formData);
-    });
-    $("textarea").val("");
+    if ($("textarea").val() === "") {
+      return alert("This field can't be empty!");
+    }
+    if ($("textarea").val().length > 140) {
+      return alert("Tweet should be 140 characters or less");
+
+    } else {
+      const formData = $(this).serialize();
+      $.post("/api/tweets", formData, function() {
+        console.log('data sent', formData);
+      });
+      $("textarea").val("");
+    }
+
   });
 });
 
