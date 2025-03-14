@@ -49,6 +49,13 @@ $(document).ready(function() {
   });
 });
 
+/* to sanitize user imput and prevent malicious actors to take over the app*/
+const sanitizeInput = function(str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = function(tweetObj) {
   const time = timeago.format(tweetObj['created_at']);
   const textFromUser = tweetObj.content.text;
@@ -88,9 +95,4 @@ const renderTweets = function(tweetsArr) {
   }
 };
 
-const sanitizeInput = function(str) {
-  let div = document.createElement("div");
-  div.appendChild(document.createTextNode(str));
-  return div.innerHTML;
-};
 

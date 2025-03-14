@@ -1,16 +1,18 @@
 .tweet {
-  border: 2px solid #545149; 
-  padding: .7em; 
-  margin: 10px 0; 
+  border: 2px solid #545149;
+  padding: .7em;
+  margin: 10px 0;
+
   p {
-    word-wrap: break-word; /*prevents text from overfloading the tweet container */
+    /*prevents text from overfloading the tweet container */
+    word-wrap: break-word;
   }
 }
 
 .tweet:hover {
   box-shadow: 5px 5px 15px #4056a1;
-
 }
+
 .tweet header {
   display: flex;
   justify-content: space-between;
@@ -29,16 +31,16 @@
 }
 
 #tweets-container img {
-   height: 38.4px;
+  height: 38.4px;
   width: 38.4px;
   padding: .3em;
- }
+}
 
 footer {
- display: flex;
- justify-content: space-between;
- align-items: center;
- font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
 }
 
 .timestamp {
@@ -48,6 +50,7 @@ footer {
 footer i {
   color: #4056a1;
 }
+
 footer i:hover {
   color: goldenrod;
 }
@@ -58,7 +61,7 @@ footer i:hover {
   .new-tweet {
     align-self: flex-end;
     width: 100%;
-    max-width: 1024px; 
+    max-width: 1024px;
   }
-  
-  }
+
+}

@@ -6,6 +6,7 @@ nav {
   justify-content: space-between;
   height: 120px;
   width: 100vw;
+  /*same color as the background for mobile size*/
   background-color: #94B6E0;
   background-image: url("/images/asfalt-light.png");
   color: #FFFFFF;
@@ -37,6 +38,7 @@ nav span {
 
   nav {
     background-color: #4056A1;
+    /* change backgroun color as required*/
     background-image: none;
   }
 }

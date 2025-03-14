@@ -24,5 +24,6 @@
     width: 100%;
     align-content: center;
     max-width: 600px;
+    /* to prevent the header from getting to wide*/
   }
 }
