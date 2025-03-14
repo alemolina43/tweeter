@@ -34,9 +34,9 @@ Tweeter is the best way to create, share, and enjoy tweets without all the page-
 
 ## Final product
 
-!["Main page (mobile view)"](<https://raw.githubusercontent.com/alemolina43/tweeter/refs/heads/master/public/images/Main(mobile).png>)
-!["Main page (desktop)"](<https://raw.githubusercontent.com/alemolina43/tweeter/refs/heads/master/public/images/Main(desktop).png>)
-!["Create tweet"](https://raw.githubusercontent.com/alemolina43/tweeter/refs/heads/master/public/images/New-tweet.png)
-!["Tweets"](https://raw.githubusercontent.com/alemolina43/tweeter/refs/heads/master/public/images/Tweets.png)
-!["Header"](https://raw.githubusercontent.com/alemolina43/tweeter/refs/heads/master/public/images/Header.png)
-!["Error handling"](https://raw.githubusercontent.com/alemolina43/tweeter/refs/heads/master/public/images/Error%20handling.png)
+!["Main page (mobile view)"](<https://raw.githubusercontent.com/alemolina43/tweeter/refs/heads/master/docs/Main(mobile).png>)
+!["Main page (desktop)"](<https://raw.githubusercontent.com/alemolina43/tweeter/refs/heads/master/docs/Main(desktop).png>)
+!["Create tweet"](https://raw.githubusercontent.com/alemolina43/tweeter/refs/heads/master/docs/New-tweet.png)
+!["Tweets"](https://raw.githubusercontent.com/alemolina43/tweeter/refs/heads/master/docs/Tweets.png)
+!["Header"](https://raw.githubusercontent.com/alemolina43/tweeter/refs/heads/master/docs/Header.png)
+!["Error handling"](https://raw.githubusercontent.com/alemolina43/tweeter/refs/heads/master/docs/Error%20handling.png)
